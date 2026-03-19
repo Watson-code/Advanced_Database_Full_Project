@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { getLiveResults, getElections } from '../services/api';
+=======
+import { getLiveResults, getAllElections } from '../services/api';
+>>>>>>> 59982642cdab25f386af41ec37c0549573d2e8cb
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 function LiveResults() {
@@ -9,7 +13,11 @@ function LiveResults() {
   const [loading, setLoading]       = useState(false);
 
   useEffect(() => {
+<<<<<<< HEAD
     getElections()
+=======
+    getAllElections()
+>>>>>>> 59982642cdab25f386af41ec37c0549573d2e8cb
       .then(res => setElections(res.data.elections || []))
       .catch(() => {});
   }, []);

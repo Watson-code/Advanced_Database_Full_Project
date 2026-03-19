@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { getAllCandidates, getElections } from '../services/api';
+=======
+import { getAllCandidates, getAllElections } from '../services/api';
+>>>>>>> 59982642cdab25f386af41ec37c0549573d2e8cb
 
 function Candidates() {
   const [candidates, setCandidates] = useState([]);
@@ -8,7 +12,11 @@ function Candidates() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+<<<<<<< HEAD
     getElections()
+=======
+    getAllElections()
+>>>>>>> 59982642cdab25f386af41ec37c0549573d2e8cb
       .then(res => setElections(res.data.elections || []))
       .catch(() => {});
   }, []);
